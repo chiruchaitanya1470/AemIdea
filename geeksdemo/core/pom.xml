@@ -41,10 +41,16 @@
                         <goals>
                             <goal>bnd-process</goal>
                         </goals>
-                        <configuration>
+                        <!-- <configuration>
                             <bnd><![CDATA[
 Import-Package: javax.annotation;version=0.0.0,*
                                 ]]></bnd>
+                        </configuration> -->
+                        <configuration>
+                            <bnd><![CDATA[
+                            Import-Package: javax.annotation;version=0.0.0,
+                            org.apache.sling.api.servlets;version="[2.3,3)",*
+                            ]]></bnd>
                         </configuration>
                     </execution>
                 </executions>
